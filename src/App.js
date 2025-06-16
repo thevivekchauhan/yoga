@@ -4,6 +4,7 @@ import logo from './assets/gov-m-logo.png';
 import titleImg from './assets/text-img.png';
 import bannerImg from './assets/gujrat-yoga-section-img-two.png';
 import indiaEmblem from './assets/gov-logo.jpg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [fileNames, setFileNames] = useState([]);
@@ -104,13 +105,20 @@ function App() {
         </div>
         <div className="yoga-form-row">
           <div className="yoga-form-group">
-            <label>Photos (કાર્યક્રમની તસવીર અપલોડ કરો)*</label>
-            <input id="yoga-file-input" className="yoga-file-input" type="file" multiple onChange={handleFileChange} />
-            <label htmlFor="yoga-file-input" className="yoga-file-label">Choose Files</label>
-            <div className="yoga-file-names">
+            <label htmlFor="yoga-file-input" className="form-label">
+              Photos (કાર્યક્રમની તસવીર અપલોડ કરો)*
+            </label>
+            <input
+              id="yoga-file-input"
+              className="form-control"
+              type="file"
+              multiple
+              onChange={handleFileChange}
+            />
+            <div className="form-text yoga-file-names" style={{ minHeight: 24 }}>
               {fileNames.length > 0 ? fileNames.join(', ') : 'No file chosen'}
             </div>
-          </div><br></br>
+          </div>
           <div className="yoga-form-group">
             <label>Name of the Chief Guest present in the programme (કાર્યક્રમમાં ઉપસ્થિત મુખ્ય મહેમાનનું નામ)</label>
             <input type="text" placeholder="Name of the Chief Guest present in the programme (કાર્યક્રમમાં ઉપસ્થિત મુખ્ય મહેમાનનું નામ)" />
