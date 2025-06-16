@@ -140,8 +140,17 @@ function App() {
               className={`yoga-select form-control${errors.department ? ' is-invalid' : ''}`}
             >
               <option value="">Please Select Department</option>
-              <option value="UNI">UNI</option>
-              <option value="OTHER">OTHER</option>
+              <option value="UNIVERSITY / કોલેજ - યુનીવર્સીટી">UNIVERSITY / કોલેજ - યુનીવર્સીટી</option>
+              <option value="HEALTH CENTER-ANGANVADI / આંગણવાડી - આંગણવાડી">HEALTH CENTER-ANGANVADI / આંગણવાડી </option>
+              <option value="ITI-POLYTECHNIC / ITI - પોલીટેકનીક">ITI-POLYTECHNIC / ITI - પોલીટેકનીક</option>
+              <option value="NRG / એનઆરજી">NRG / એનઆરજી</option>
+              <option value="PANCHAYAT AREA / પંચાયત વિસ્તાર">PANCHAYAT AREA / પંચાયત વિસ્તાર</option>
+              <option value="POLICE - JAIL / પોલીસ – જેલ">POLICE - JAIL / પોલીસ – જેલ</option>
+              <option value="PRIVATE SECTOR / ખાનગી ક્ષેત્ર">PRIVATE SECTOR / ખાનગી ક્ષેત્ર</option>
+              <option value="SCHOOL | શાળા">SCHOOL | શાળા</option>
+              <option value="URBAN AREA / શહેરી વિસ્તાર">URBAN AREA / શહેરી વિસ્તાર</option>
+              <option value="YOG ORGANIZATION / યોગિક સંસ્થા">YOG ORGANIZATION / યોગિક સંસ્થા</option>
+              <option value="OTHER / અન્ય">OTHER / અન્ય</option>
             </select>
             {errors.department && <div className="invalid-feedback">{errors.department}</div>}
           </div>
