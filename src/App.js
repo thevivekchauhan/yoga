@@ -7,10 +7,17 @@ import indiaEmblem from './assets/gov-logo.jpg';
 
 function App() {
   const [fileNames, setFileNames] = useState([]);
+  const [selectedDistrict, setSelectedDistrict] = useState('');
+  const [selectedCity, setSelectedCity] = useState('');
+  const [selectedWard, setSelectedWard] = useState('');
+  const [selectedDepartment, setSelectedDepartment] = useState('');
 
   const handleFileChange = (e) => {
     setFileNames(Array.from(e.target.files).map(f => f.name));
   };
+
+  // Generate array of numbers from 1 to 50 for Ward options
+  const wardOptions = Array.from({ length: 50 }, (_, i) => i + 1);
 
   return (
     <div className="yoga-app">
@@ -37,17 +44,40 @@ function App() {
         <div className="yoga-form-row">
           <div className="yoga-form-group">
             <label>District (જિલ્લો)*</label>
-            <input type="text" placeholder="Please select district" />
+            <select 
+              value={selectedDistrict} 
+              onChange={(e) => setSelectedDistrict(e.target.value)}
+              className="yoga-select"
+            >
+              <option value="">Please Select District</option>
+            </select>
           </div>
           <div className="yoga-form-group">
             <label>City/Taluka (શહેર/તાલુકો)*</label>
-            <input type="text" placeholder="Please select City/Taluka" />
+            <select 
+              value={selectedCity} 
+              onChange={(e) => setSelectedCity(e.target.value)}
+              className="yoga-select"
+            >
+              <option value="">Please Select City/Taluka</option>
+            </select>
           </div>
         </div>
         <div className="yoga-form-row">
           <div className="yoga-form-group">
             <label>Ward (વોર્ડ)</label>
-            <input type="text" placeholder="Please Select Ward (વોર્ડ)" />
+            <select 
+              value={selectedWard} 
+              onChange={(e) => setSelectedWard(e.target.value)}
+              className="yoga-select"
+            >
+              <option value="">Please Select Ward</option>
+              {wardOptions.map((ward) => (
+                <option key={ward} value={ward}>
+                  {ward}
+                </option>
+              ))}
+            </select>
           </div>
           <div className="yoga-form-group">
             <label>Venue of the event (કાર્યક્રમનું સ્થળ)*</label>
@@ -57,7 +87,15 @@ function App() {
         <div className="yoga-form-row">
           <div className="yoga-form-group">
             <label>Department Name (વિભાગનું નામ)</label>
-            <input type="text" placeholder="Please Select Department Name (વિભાગનું નામ)" />
+            <select 
+              value={selectedDepartment} 
+              onChange={(e) => setSelectedDepartment(e.target.value)}
+              className="yoga-select"
+            >
+              <option value="">Please Select Department</option>
+              <option value="UNI">UNI</option>
+              <option value="OTHER">OTHER</option>
+            </select>
           </div>
           <div className="yoga-form-group">
             <label>Number of participants (કાર્યક્રમમાં હાજર રહેલા લોકોની સંખ્યા)</label>

@@ -178,16 +178,39 @@
 }
 
 .yoga-form-group input[type="text"],
-.yoga-form-group input[type="number"] {
+.yoga-form-group input[type="number"],
+.yoga-form-group select {
   padding: 8px 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
   margin-bottom: 8px;
+  width: 100%;
+  background-color: #fff;
+  cursor: pointer;
 }
 
 .yoga-form-group input[type="file"] {
   margin-top: 4px;
+}
+
+.yoga-form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+  padding-right: 30px;
+}
+
+.yoga-form-group select:focus {
+  outline: none;
+  border-color: #3f51b5;
+  box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.1);
+}
+
+.yoga-form-group select option {
+  padding: 8px;
 }
 
 .yoga-form-submit {
@@ -248,6 +271,9 @@
   .yoga-form-row {
     flex-direction: column;
     gap: 0;
+  }
+  .yoga-form-group select {
+    font-size: 16px; /* Prevents zoom on mobile devices */
   }
 }
 
