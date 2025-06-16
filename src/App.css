@@ -1,0 +1,274 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Reset and base styles */
+.yoga-app {
+  font-family: 'Noto Sans Gujarati', Arial, sans-serif;
+  background: #fff;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.yoga-header {
+  width: 100%;
+  background: #fff;
+  padding-top: 24px;
+}
+
+.yoga-header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+  gap: 16px;
+}
+
+.yoga-logo {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+
+.yoga-title-img {
+  flex: 1;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.yoga-header-title {
+  text-align: center;
+  flex: 1;
+}
+
+.yoga-header-title h1 {
+  font-size: 2.2rem;
+  color: #a80000;
+  margin: 0;
+  font-weight: bold;
+}
+
+.yoga-header-title p {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0;
+}
+
+.yoga-india-emblem {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.yoga-header-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 16px 0 16px;
+}
+
+.yoga-day-banner {
+  width: 100%;
+  max-width: 1100px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+}
+
+.yoga-header-people {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.yoga-leaders {
+  width: 270px;
+  max-width: 100%;
+  height: auto;
+}
+
+.yoga-orange-bar {
+  background: #ff9800;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 0 2px 0;
+  margin-top: 18px;
+  position: relative;
+  z-index: 1;
+}
+
+.yoga-orange-bar-sub {
+  display: block;
+  font-size: 1rem;
+  font-weight: normal;
+  margin-top: 2px;
+}
+
+.yoga-form {
+  background: #fff;
+  max-width: 1100px;
+  margin: 24px auto 0 auto;
+  padding: 32px 24px 24px 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+}
+
+.yoga-form-row {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 18px;
+}
+
+.yoga-form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.yoga-form-group label {
+  font-size: 1rem;
+  color: #a80000;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.yoga-form-group input[type="text"],
+.yoga-form-group input[type="number"] {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.yoga-form-group input[type="file"] {
+  margin-top: 4px;
+}
+
+.yoga-form-submit {
+  text-align: center;
+  margin-top: 18px;
+}
+
+.yoga-form-submit button {
+  background: #3f51b5;
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 10px 32px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.yoga-form-submit button:hover {
+  background: #283593;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .yoga-header-top, .yoga-header-banner, .yoga-form {
+    max-width: 98vw;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .yoga-title-img {
+    max-width: 300px;
+  }
+  .yoga-leaders {
+    width: 180px;
+  }
+}
+
+@media (max-width: 700px) {
+  .yoga-header-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .yoga-header-banner {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .yoga-title-img {
+    max-width: 90vw;
+  }
+  .yoga-day-banner {
+    max-width: 98vw;
+  }
+  .yoga-leaders {
+    width: 120px;
+  }
+  .yoga-form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .yoga-header-title h1 {
+    font-size: 1.2rem;
+  }
+  .yoga-header-title p {
+    font-size: 0.9rem;
+  }
+  .yoga-orange-bar {
+    font-size: 1rem;
+  }
+  .yoga-orange-bar-sub {
+    font-size: 0.85rem;
+  }
+  .yoga-form {
+    padding: 12px 2vw 12px 2vw;
+  }
+  .yoga-logo, .yoga-india-emblem {
+    width: 50px;
+    height: 50px;
+  }
+}
