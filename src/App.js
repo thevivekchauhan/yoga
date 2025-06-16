@@ -173,7 +173,7 @@ function App() {
               {fileNames.length > 0 ? fileNames.join(', ') : 'No file chosen'}
             </div>
             {errors.photos && <div className="invalid-feedback">{errors.photos}</div>}
-          </div>
+          </div><br></br>
           <div className="yoga-form-group">
             <label>Name of the Chief Guest present in the programme (કાર્યક્રમમાં ઉપસ્થિત મુખ્ય મહેમાનનું નામ)</label>
             {chiefGuests.map((guest, idx) => (
